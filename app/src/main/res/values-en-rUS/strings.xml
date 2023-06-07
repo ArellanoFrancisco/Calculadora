@@ -4,4 +4,12 @@
     <string name="hint1">Enter Number 1</string>
     <string name="hint2">Enter Number 2</string>
     <string name="resultado">" Result"</string>
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="division">/</string>
+    <string name="multiplicacion">*</string>
+    <string name="respuesta">The result is:</string>
+    <string name="toast1">Enter both numbers</string>
+    <string name="Error">Error: Invalid input</string>
+    <string name="salir">Exit</string>
 </resources>

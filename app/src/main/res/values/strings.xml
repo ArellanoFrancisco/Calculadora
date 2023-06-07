@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Calculadora</string>
-    <string name="suma" translatable="false"> + </string>
-    <string name="resta" translatable="false"> - </string>
-    <string name="division" translatable="false"> / </string>
-    <string name="multiplicacion" translatable="false"> * </string>
+    <string name="suma"> + </string>
+    <string name="resta"> - </string>
+    <string name="division"> / </string>
+    <string name="multiplicacion"> * </string>
     <string name="hint1">Ingrese Numero 1 </string>
     <string name="hint2">Ingrese Numero 2 </string>
     <string name="resultado"> Resultado </string>
+    <string name="respuesta" > El Resultado es: </string>
+    <string name="toast1"> Ingrese ambos numeros </string>
+    <string name="Error" > Error: Entrada no válida </string>
+    <string name="salir" > Salir </string>
+
 </resources>

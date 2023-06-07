@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,70 +29,135 @@ public class MainActivity extends AppCompatActivity {
         /* Process */
 
     Suma.setOnClickListener(new View.OnClickListener() {
+
         @SuppressLint("SetTextI18n")
         @Override
         public void onClick(View v) {
 
             String num1 = Num1.getText().toString();
             String num2 = Num2.getText().toString();
+            if (num1.isEmpty() || num2.isEmpty() ){
+                String toast1 = getString(R.string.toast1);
+                Toast tostada= Toast.makeText(getApplicationContext(),toast1,Toast.LENGTH_LONG);
+                tostada.setGravity(Gravity.CENTER_HORIZONTAL,0,80);
+                tostada.show();
+            } else {
+                try {
 
-            int result = Integer.parseInt(num1)+Integer.parseInt(num2);
-            Result.setText("El Resultado es "+result);
-            Num1.setText("");
-            Num2.setText("");
+                    int result = Integer.parseInt(num1) + Integer.parseInt(num2);
+                    String Respuesta = getString(R.string.respuesta);
+                    Result.setText(Respuesta + result);
+                    Num1.setText("");
+                    Num2.setText("");
+                } catch (NumberFormatException e) {
 
+                    String Error = getString(R.string.Error);
+                    Toast.makeText(getApplicationContext(), Error, Toast.LENGTH_LONG).show();
+
+                }
+            }
         }
 
     });
     Resta.setOnClickListener(new View.OnClickListener() {
+
         @SuppressLint("SetTextI18n")
         @Override
         public void onClick(View v) {
 
-             String num1 = Num1.getText().toString();
-             String num2 = Num2.getText().toString();
+            String num1 = Num1.getText().toString();
+            String num2 = Num2.getText().toString();
+            if (num1.isEmpty() || num2.isEmpty() ){
+                String toast1 = getString(R.string.toast1);
+                Toast tostada= Toast.makeText(getApplicationContext(),toast1,Toast.LENGTH_LONG);
+                tostada.setGravity(Gravity.CENTER_HORIZONTAL,0,80);
+                tostada.show();
+            } else {
+                try {
 
-             int result = Integer.parseInt(num1)-Integer.parseInt(num2);
-             Result.setText("El Resultado es "+result);
-             Num1.setText("");
-             Num2.setText("");
+                    int result = Integer.parseInt(num1) - Integer.parseInt(num2);
+                    String Respuesta = getString(R.string.respuesta);
+                    Result.setText(Respuesta + result);
+                    Num1.setText("");
+                    Num2.setText("");
+                } catch (NumberFormatException e) {
 
+                    String Error = getString(R.string.Error);
+                    Toast.makeText(getApplicationContext(), Error, Toast.LENGTH_LONG).show();
+
+                }
+            }
         }
 
     });
     Division.setOnClickListener(new View.OnClickListener() {
+
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
                 String num1 = Num1.getText().toString();
                 String num2 = Num2.getText().toString();
+                if (num1.isEmpty() || num2.isEmpty() ){
+                    String toast1 = getString(R.string.toast1);
+                    Toast tostada= Toast.makeText(getApplicationContext(),toast1,Toast.LENGTH_LONG);
+                    tostada.setGravity(Gravity.CENTER_HORIZONTAL,0,80);
+                    tostada.show();
+                } else {
+                    try {
+                        int result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                        String Respuesta = getString(R.string.respuesta);
+                        Result.setText(Respuesta + result);
+                        Num1.setText("");
+                        Num2.setText("");
+                    } catch (NumberFormatException e) {
 
-                int result = Integer.parseInt(num1)/Integer.parseInt(num2);
-                Result.setText("El Resultado es "+result);
-                Num1.setText("");
-                Num2.setText("");
+                        String Error = getString(R.string.Error);
+                        Toast.makeText(getApplicationContext(), Error, Toast.LENGTH_LONG).show();
 
+                    }
+                }
             }
 
         });
     Multiplicacion.setOnClickListener(new View.OnClickListener() {
+
             @SuppressLint("SetTextI18n")
             @Override
-            public void onClick(View v) {
-
+            public void onClick(View v)
+{
                 String num1 = Num1.getText().toString();
                 String num2 = Num2.getText().toString();
-
-                int result = Integer.parseInt(num1)*Integer.parseInt(num2);
-                Result.setText("El Resultado es "+result);
-                Num1.setText("");
-                Num2.setText("");
-
+                if (num1.isEmpty() || num2.isEmpty() ){
+                    String toast1 = getString(R.string.toast1);
+                    Toast tostada= Toast.makeText(getApplicationContext(),toast1,Toast.LENGTH_LONG);
+                    tostada.setGravity(Gravity.CENTER_HORIZONTAL,0,80);
+                    tostada.show();
+                } else {
+                    try {
+                        int result = Integer.parseInt(num1) * Integer.parseInt(num2);
+                        String Respuesta = getString(R.string.respuesta);
+                        Result.setText(Respuesta + result);
+                        Num1.setText("");
+                        Num2.setText("");
+                    } catch (NumberFormatException e) {
+                        String Error = getString(R.string.Error);
+                        Toast.makeText(getApplicationContext(), Error, Toast.LENGTH_LONG).show();
+                    }
+                }
             }
 
         });
 
+
+        Button btnsalir = findViewById(R.id.button5);
+        btnsalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
 
     }
 }
