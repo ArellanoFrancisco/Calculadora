@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="hint1">Ingrese Numero 1</string>
+    <string name="hint2">"Ingrese Numero 2 "</string>
+    <string name="resultado">" Resultado "</string>
+</resources>
